@@ -84,3 +84,14 @@ gradle.properties
 ## Примечание о Gradle bootstrap
 
 Среда подготовки была без доступа к сети и без установленного Gradle, поэтому вместо официального `gradle-wrapper.jar` включён небольшой bootstrap-лаунчер: он скачивает зафиксированный Gradle 8.14.6 и проверяет SHA-256 архива. Он поддерживает команды `gradlew` / `gradlew.bat`, но это не официальный Wrapper JAR. Если преподаватель требует стандартный Gradle Wrapper, после установки Gradle выполните `gradle wrapper --gradle-version 8.14.6`, проверьте сгенерированные файлы и закоммитьте их. Workflow использует этот launcher и ожидает доступ к `services.gradle.org` и Maven Central.
+
+## Дополнительное задание (стр. 52 методички)
+
+Реализованы `clear`, `done <index>` и `search <строка>`. Для расширенного функционала добавлены тесты на очистку списка, отметку выполнения, недопустимые индексы и поиск без учёта регистра. Отдельный `Nightly Build & Test` запускается по cron ежедневно в 01:17 UTC и вручную через `workflow_dispatch`; он собирает проект и тестирует его, но не публикует Release.
+
+## Ожидаемые ссылки после публикации
+
+- Repository: `https://github.com/<OWNER>/pr2-todo-app`
+- Actions: `https://github.com/<OWNER>/pr2-todo-app/actions`
+- Releases: `https://github.com/<OWNER>/pr2-todo-app/releases`
+- Packages: `https://github.com/<OWNER>?tab=packages`

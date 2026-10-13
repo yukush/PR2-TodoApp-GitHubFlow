@@ -1,0 +1,26 @@
+# Gradle outputs and local caches
+.gradle/
+build/
+**/build/
+
+# IDE settings
+.idea/
+*.iml
+.vscode/
+
+# Compiled Java and logs
+*.class
+*.log
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Local credentials and environment
+.env
+.env.*
+!.env.example
+local.properties
+
+# Report rendering intermediates
+.docs-render/

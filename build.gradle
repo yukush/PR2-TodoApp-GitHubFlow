@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'maven-publish'
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
@@ -57,7 +58,6 @@ tasks.named('distTar') {
     dependsOn tasks.named('shadowJar')
 }
 
-plugins.apply('maven-publish')
 
 publishing {
     publications {

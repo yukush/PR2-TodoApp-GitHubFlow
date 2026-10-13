@@ -40,7 +40,7 @@
 - `.github/workflows/publish-package.yml`: запускается после успешного `CI / Build & Release` на `main` и публикует Maven-артефакт в GitHub Packages.
 - `.github/workflows/nightly.yml`: ночная сборка и тесты по расписанию без создания релиза.
 
-GitHub Packages берёт имя владельца и репозитория из `GITHUB_REPOSITORY`; логин и токен передаются средой GitHub Actions. Секреты не хранятся в исходном коде.
+GitHub Packages берёт имя владельца и репозитория из `GITHUB_REPOSITORY`; логин и токен передаются средой GitHub Actions. Секреты не хранятся в исходном коде. Перед следующим релизом повышайте `version` в `gradle.properties`, чтобы не перезаписывать артефакт уже созданного тега.
 
 ## Публикация на GitHub
 
